@@ -1,0 +1,29 @@
+{
+  "clickNumber" : {
+    "clickNumber" : "DG20220105114235"
+  },
+  "luminescentImage" : {
+    "luminescentImageFileName" : "luminescent.TIF",
+    "acquisitionDate" : "Wednesday, January 05, 2022",
+    "acquisitionTime" : "11:42:59"
+  },
+  "userLabelNameSet" : {
+    "userLabelNameSet" : "Living Image Universal",
+    "user" : "zakharenko/GORDON",
+    "group" : "DG001   1/4/22",
+    "experiment" : "Brain Tumor",
+    "comment1" : "Auto exp., small binning, F/Stop 1, 10 min",
+    "comment2" : "DORSAL-  3466, 3467, 3468, 3469, 3470",
+    "timePoint" : "",
+    "animalNumber" : "3466, 3467, 3468, 3469, 3470",
+    "animalStrain" : "",
+    "animalModel" : "",
+    "sex" : "",
+    "view" : "Dorsal",
+    "cellLine" : "",
+    "reporter" : "",
+    "treatment" : "",
+    "lucInjectionTime" : "",
+    "iacucNumber" : ""
+  }
+}

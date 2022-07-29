@@ -1,0 +1,106 @@
+{
+  "name": "bli-split",
+  "label": "bli-split",
+  "description": "Split multi-subject BLI image sessions into single subject image sessions",
+  "version": "1.0",
+  "schema-version": "1.0",
+  "info-url": "",
+  "image": "xnat/bli-split:1.0",
+  "type": "docker",
+  "working-directory": "/usr/src/app",
+  "command-line": "python run.py /input/SCANS -u $XNAT_USER -p $XNAT_PASS -x $XNAT_HOST #PROJECT# #EXPERIMENT# --output_directory /output ",
+  "override-entrypoint": true,
+  "mounts": [
+    {
+      "name": "input-mount",
+      "writable": false,
+      "path": "/input"
+    },
+    {
+      "name": "output-mount",
+      "writable": true,
+      "path": "/output"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "project",
+      "description": "XNAT Project ID",
+      "type": "string",
+      "required": true,
+      "replacement-key": "#PROJECT#",
+      "command-line-flag": "--project"
+    },
+    {
+      "name": "experiment",
+      "description": "XNAT Experiment Label",
+      "type": "string",
+      "required": true,
+      "replacement-key": "#EXPERIMENT#",
+      "command-line-flag": "--experiment"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "qc_snapshots_output",
+      "description": "The QC snapshots of the split BLI session.",
+      "required": true,
+      "mount": "output-mount",
+      "path": "qc"
+    }
+  ],
+  "xnat": [
+    {
+      "name": "bli-split",
+      "label": "BLI Splitter",
+      "description": "Split multi-subject BLI image sessions into single subject image sessions",
+      "contexts": ["pixi:bliSessionData"],
+      "external-inputs": [
+        {
+          "name": "image-session",
+          "description": "BLI session input",
+          "type": "Session",
+          "required": true,
+          "provides-files-for-command-mount": "input-mount",
+          "user-settable": false,
+          "load-children": true
+        }
+      ],
+      "derived-inputs": [
+        {
+          "name": "project-id",
+          "description": "XNAT Project ID",
+          "type": "string",
+          "required": true,
+          "provides-value-for-command-input": "project",
+          "user-settable": true,
+          "load-children": false,
+          "derived-from-wrapper-input": "image-session",
+          "derived-from-xnat-object-property": "project-id",
+          "multiple": false
+        },
+        {
+          "name": "session-label",
+          "description": "XNAT Image Session Label",
+          "type": "string",
+          "required": true,
+          "provides-value-for-command-input": "experiment",
+          "user-settable": true,
+          "load-children": false,
+          "derived-from-wrapper-input": "image-session",
+          "derived-from-xnat-object-property": "label",
+          "multiple": false
+        }
+      ],
+      "output-handlers": [
+        {
+          "name": "qc-snapshots-resource",
+          "accepts-command-output": "qc_snapshots_output",
+          "as-a-child-of": "image-session",
+          "type": "Resource",
+          "label": "qc-snapshots"
+        }
+      ]
+    }
+  ]
+}

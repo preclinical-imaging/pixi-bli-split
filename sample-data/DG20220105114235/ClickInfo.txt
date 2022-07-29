@@ -1,0 +1,758 @@
+*** ClickNumber:	DG20220105114235
+ClickInfoType:	RawData
+Living Image Version:	4.7.3.20616 (Jan 23 2019)
+Modified Since Saved:	0
+
+*** User Label Name Set:	Living Image Universal
+User:	
+Group:	
+Experiment:	
+Comment1:	
+Comment2:	
+Time Point:	
+Animal Number:	
+Animal Strain:	
+Animal Model:	
+Sex:	
+View:	
+Cell Line:	
+Reporter:	
+Treatment:	
+Luc Injection Time:	
+IACUC Number:	
+
+*** User Input:	
+User ID:	DG
+Display Type:	Overlay
+User:	
+Group:	
+Experiment:	
+Comment1:	
+Comment2:	
+Time Point:	
+Animal Number:	
+Animal Strain:	
+Animal Model:	
+Sex:	
+View:	
+Cell Line:	
+Reporter:	
+Treatment:	
+Luc Injection Time:	
+IACUC Number:	
+Displayed Key Choices:	User;Group;Experiment;Comment1;Comment2;
+
+*** Analysis User Input:	
+Comment2:	
+
+*** photographic image:	photograph.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:42:42
+Acquisition Seconds:	3724249362
+Pixel Width:	1
+Pixel Height:	1
+Binning Factor:	2
+Image Units:	counts
+f Number:	8
+Field of View:	22.4
+Filter Position:	1
+Emission filter:	Open
+Exposure Time Sec:	0.2
+Object radius:	0.75
+Subject size:	1.5
+Error Wave:	No Error
+
+*** readbiasonly image:	readbiasonly.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:43:42
+Acquisition Seconds:	3724249422
+Pixel Width:	1
+Pixel Height:	1
+Binning Factor:	8
+Read Bias Level:	496.628
+Demand Temperature:	-90
+Measured Temperature:	-89
+Data Multiplier:	1
+Background Exposure (Seconds):	0.0
+
+*** darkcharge image:	background.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:42:59
+Acquisition Seconds:	3724249379
+Pixel Width:	1
+Pixel Height:	1
+Data Multiplier:	10
+Read Bias Level:	496.203
+Binning Factor:	8
+Demand Temperature:	-90
+Measured Temperature:	-89
+Temperature Lock Status:	Locked
+Background Exposure (Seconds):	40
+Background Click:	BKG20220105025931
+
+*** readbias image:	readbias.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:42:59
+Acquisition Seconds:	3724249379
+Pixel Width:	1
+Pixel Height:	1
+Data Multiplier:	10
+Binning Factor:	8
+Demand Temperature:	-90
+Measured Temperature:	-89
+Temperature Lock Status:	Locked
+Background Exposure (Seconds):	0.0
+Background Click:	BKG20220105025931
+
+*** luminescent image:	luminescent.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:42:59
+Acquisition Seconds:	3724249379
+Pixel Width:	1
+Pixel Height:	1
+Image Units:	counts
+Binning Factor:	8
+Luminescent Exposure (Seconds):	40
+Luminescent Exposure Units:	sec
+f Number:	1
+Field of View:	22.4
+Read Bias Level:	496.628
+Emission filter:	Open
+Filter Position:	1
+Excitation filter:	Block
+Subject size:	1.5
+Demand Temperature:	-90
+Measured Temperature:	-89
+Error Wave:	No Error
+Cosmic:	0
+Background Corrected:	0
+Flat Field Corrected:	0
+Cosmic Corrected:	0
+Adapative FL corrected:	0
+FL Background Corrected:	0
+Intensity Calibration:	counts
+
+*** Camera System Info:	
+#################################################################
+#	IVIS Configuration
+Camera Info File Version Number:	:	3.0
+#################################################################
+Camera System ID:	IS2045N8023
+Camera System alias:	IS2045N8023
+System Configuration:	IVIS 200 Spectrum
+
+
+#####################################################################
+#	Customer Information
+#####################################################################
+#	St Jude Childrens Research Hospital
+#	ARC Room MA1126
+#	Cheryl's new IVIS
+#	Dell 5820 JF45R53
+#	RAS4 RA2046N0540
+#	LI4 0002-3943-3262-2524-3206
+
+
+#####################################################################
+#	Camera Parameters				 VN 8/05/2009
+#####################################################################
+Camera System Info:	Andor Newton
+Camera Type:	Andor, iKon
+Camera CCD Type:	DZ436
+
+Camera Serial Number:	CCD-25064
+
+Lens Type:	IVIS 200 Lens
+
+Andor Photo ADC Speed Index:	1
+Andor Photo Preamp Gain Index:	0
+Andor Photo ADC Channel:	0
+
+Andor Lumin ADC Speed Index:	3
+Andor Lumin Preamp Gain Index:	2
+Andor Lumin ADC Channel:	0
+
+Andor Fluor ADC Speed Index:	2
+Andor Fluor Preamp Gain Index:	2
+Andor Fluor ADC Channel:	0
+
+Andor Vertical Shift Speed:	0
+
+CCD Saturation Level:	61000
+
+Software crash sensor:	NO
+
+Camera CCD Temperature:	-90
+Temperature lock range:	3
+
+Cryo Check Test Temperature:	-93
+Cryo Check Pass Temperature:	-90
+
+Read Bias Lower Limit:	0
+Read Bias Upper Limit:	3000
+Dark Charge Outlier Limit:	50
+
+Image Rotation:	0
+Image Transpose:	no
+
+CCD ROI Y OFFSET:	0
+CCD ROI X OFFSET:	0
+
+Background Purge Age:	3
+
+
+#####################################################################
+#	Pixel and Column Defect Map			 EJ  11/6/2020
+# 	ONLY ONE (the first) CCD MAP ENTRY WILL BE RECOGNIZED!
+# 	CCDmap:col #, start row #, end row#, col#, start row, end row...-1, row#, #start col, end col,...,-1, xVal1, yVal1, xVal2,yVal2...-1, substitute value, debug #flag
+# 	For CCD corrections, set substitute value=0, debug #flag=0
+#####################################################################
+CCDMap:	-1,-1,929,1211,1828,1069,-1, 0, 0
+
+
+#################################################################
+#	Default Imaging Settings
+#################################################################
+#default control values - 1,2,4,8 are permissible values for fstop
+Photographic fstop:	8
+Luminescent fstop:	1
+Photographic binning:	4
+Luminescent binning:	16
+
+
+#####################################################################
+# 	Stage temperature controller Settings		 EJ  11/6/2020
+#####################################################################
+Omega controller installed:	output 2
+Stage demand temperature:	37
+Stage demand temperature offset:	9
+Stage Temperature Offset:	-10
+
+
+#####################################################################
+#	Excitaion and Emission Filter Configuration	MD 08/15/2008
+# 	Position 1 and 24 must be always labeled "Open"
+#####################################################################
+EM Filter Position 1 label:	Open
+EM Filter Position 2 label:	Empty
+EM Filter Position 3 label:	500
+EM Filter Position 4 label:	520
+EM Filter Position 5 label:	540
+EM Filter Position 6 label:	560
+EM Filter Position 7 label:	580
+EM Filter Position 8 label:	600
+EM Filter Position 9 label:	620
+EM Filter Position 10 label:	640
+EM Filter Position 11 label:	660
+EM Filter Position 12 label:	Empty
+EM Filter Position 13 label:	680
+EM Filter Position 14 label:	700
+EM Filter Position 15 label:	720
+EM Filter Position 16 label:	740
+EM Filter Position 17 label:	760
+EM Filter Position 18 label:	780
+EM Filter Position 19 label:	800
+EM Filter Position 20 label:	820
+EM Filter Position 21 label:	840
+EM Filter Position 22 label:	Empty
+EM Filter Position 23 label:	Empty
+EM Filter Position 24 label:	Open
+
+EX Filter Position 1 label:	Block
+EX Filter Position 2 label:	430
+EX Filter Position 3 label:	465
+EX Filter Position 4 label:	500
+EX Filter Position 5 label:	535
+EX Filter Position 6 label:	570
+EX Filter Position 7 label:	605
+EX Filter Position 8 label:	640
+EX Filter Position 9 label:	675
+EX Filter Position 10 label:	710
+EX Filter Position 11 label:	745
+EX Filter Position 12 label:	ND2
+
+
+#####################################################################
+#	Field of View					 EJ  11/6/2020
+# 	Shelf FOV at each position in cm
+#####################################################################
+Shelf Position A FOV:	4
+Shelf Position B FOV:	6.6
+Shelf Position C FOV:	13.2
+Shelf Position D FOV:	22.4
+
+Shelf Position Load:	19
+
+FOV Clip Level:	0
+Fluorescence FOV Clip Level:	5
+
+
+#################################################################
+#	Spectral Imaging Filters Characterization  Eric Jones Nov-06-2020
+# Values are:Central Wave,Bandwidth,Transmission,Spectr. Resp,ND2 Power Ratio
+#################################################################
+Spectral Imaging Filter 500:	499.73,20.36,0.968,0.645,0.452
+Spectral Imaging Filter 520:	519.50,19.61,0.990,0.728,0.517
+Spectral Imaging Filter 540:	538.54,19.29,0.984,0.823,0.576
+Spectral Imaging Filter 560:	558.80,19.57,0.976,0.898,0.661
+Spectral Imaging Filter 580:	578.31,20.67,0.974,0.973,0.780
+Spectral Imaging Filter 600:	599.01,19.92,0.999,0.973,0.817
+Spectral Imaging Filter 620:	618.96,18.77,1.000,0.982,0.829
+Spectral Imaging Filter 640:	639.07,19.84,0.981,1.000,0.936
+Spectral Imaging Filter 660:	659.13,19.48,0.983,0.994,0.948
+Spectral Imaging Filter 680:	678.74,18.94,0.995,0.970,0.945
+Spectral Imaging Filter 700:	698.88,19.77,0.999,0.957,1.000
+Spectral Imaging Filter 720:	718.58,18.83,0.994,0.923,0.937
+Spectral Imaging Filter 740:	738.29,19.44,0.999,0.879,0.937
+Spectral Imaging Filter 760:	758.88,19.83,0.995,0.852,0.890
+Spectral Imaging Filter 780:	778.16,20.23,0.999,0.813,0.796
+Spectral Imaging Filter 800:	798.38,19.47,0.989,0.787,0.643
+Spectral Imaging Filter 820:	816.92,19.85,0.999,0.693,0.535
+Spectral Imaging Filter 840:	839.24,20.72,0.992,0.616,0.462
+
+
+#####################################################################
+#	Spectral Imaging Excitation Filters		EJ  11/6/2020
+# 	Measured at center 2 mm hole 15x23 Plate
+# 	Values are:Central Wavelength, Bandwidth, High/muW, Low/muW
+#####################################################################
+Spectral Imaging Excitation 430:	431.20,	23.65,	1.30E+02,	8.28E+00
+Spectral Imaging Excitation 465:	466.78,	31.73,	2.25E+02,	1.10E+01
+Spectral Imaging Excitation 500:	499.74,	30.72,	3.31E+02,	1.95E+01
+Spectral Imaging Excitation 535:	536.12,	31.74,	4.11E+02,	2.72E+01
+Spectral Imaging Excitation 570:	570.74,	28.67,	5.36E+02,	4.28E+01
+Spectral Imaging Excitation 605:	605.60,	28.99,	6.41E+02,	5.89E+01
+Spectral Imaging Excitation 640:	639.71,	27.98,	6.92E+02,	7.35E+01
+Spectral Imaging Excitation 675:	675.99,	28.24,	7.50E+02,	8.89E+01
+Spectral Imaging Excitation 710:	710.32,	26.89,	7.63E+02,	9.99E+01
+Spectral Imaging Excitation 745:	745.42,	29.33,	7.06E+02,	1.03E+02
+Spectral Imaging Excitation ND2:	640,	20,6.59E+00,	6.59E-01
+
+
+#####################################################################
+#	Filter Wheel Alignment			         EJ  11/6/2020
+#####################################################################
+Filter Wheel Positions per Wheel:	12
+Filter Wheel Rotation Steps:	73107
+Filter Wheel Position 1 Steps:	-1796
+
+Filter2 Wheel Rotation Steps:	73089
+Filter2 Wheel Position 1 Steps:	4836
+
+EM Filter Wheel Positions per Wheel:	12
+EM Filter Wheel Rotation Steps:	73107
+EM Filter Wheel Position 1 Steps:	-1796
+
+EM Filter2 Wheel Rotation Steps:	73089
+EM Filter2 Wheel Position 1 Steps:	4836
+
+EX Filter Wheel Rotation Steps:	3200
+EX Filter Wheel Position 1 Steps:	-65
+EX Filter Wheel Positions per Wheel:	12
+
+
+####################################################################
+#	Stage Parameters				EJ  11/6/2020
+# 	Shelf number represents focus for Zero subject height
+####################################################################
+Shelf Position A steps:	86663
+Shelf Position B steps:	71875
+Shelf Position C steps:	55181
+Shelf Position D steps:	20813
+
+Shelf Position Service steps:	87000
+Shelf Position Load steps:	36100
+Shelf Position Soft Limit:	88202
+Shelf Position Upper Hard Limit:	88302
+Shelf Position Lower Hard Limit:	-4482
+
+Shelf Steps per mm:	160.1
+
+
+####################################################################
+#	Lens Carousel Alignment				EJ  11/6/2020
+####################################################################
+Lens Position A steps:	19237
+Lens Position B steps:	5237
+Lens Position C steps:	9904
+Lens Position D steps:	14570
+
+
+#####################################################################
+#	f-stop Parameters			 	 EJ  11/6/2020
+#####################################################################
+Lens fstop 1 steps:	320
+Lens fstop 2 steps:	3804
+Lens fstop 4 steps:	5320
+Lens fstop 8 steps:	5991
+
+Lens fstop Soft Limit:	6140
+
+
+#####################################################################
+#	Motor Speeds	 				  AF  1/25/19
+# 		S=Speed
+#		F=Acceleration
+#		R=Deceleration
+#		H=home
+#####################################################################
+Lens Motor Speed F:	2800
+Lens Motor Speed R:	2800
+Lens Motor Speed S:	1600
+Lens Motor Speed H:	1200
+
+Lens fstop Motor Speed F:	8000
+Lens fstop Motor Speed R:	16000
+Lens fstop Motor Speed S:	4000
+Lens fstop Motor Speed H:	2000
+
+EM Filter Motor Speed F:	80000
+EM Filter Motor Speed R:	2400000
+EM Filter Motor Speed S:	16000
+EM Filter Motor Speed H:	10000
+
+Shelf motor speed F:	10000
+Shelf motor speed R:	10000
+Shelf motor speed S:	6100
+Shelf motor speed H:	6100
+
+EX Filter Motor Speed F:	28480
+EX Filter Motor Speed R:	48000
+EX Filter Motor Speed S:	2496
+EX Filter Motor Speed H:	1248
+
+Fluorescence X motor Speed F:	10000
+Fluorescence X motor Speed R:	112500
+Fluorescence X motor Speed S:	15000
+Fluorescence X motor Speed H:	7500
+
+Fluorescence Y motor Speed F:	10000
+Fluorescence Y motor Speed R:	112500
+Fluorescence Y motor Speed S:	15000
+Fluorescence Y motor Speed H:	7500
+
+
+#####################################################################
+# 	Bottom Illumination Parameters		Will 2021-06-10
+#####################################################################
+Measured xy motor steps per cm:	1599
+
+Fluorescence X motor Soft Limit:	13125
+Fluorescence Y motor Soft Limit:	19000
+
+X0 FOV C Pixel:	1455
+Y0 FOV C Pixel:	1424
+X0 Motor steps:	787
+Y0 Motor steps:	4180
+X1 FOV C Pixel:	424
+Y1 FOV C Pixel:	478
+X1 Motor steps:	12337
+Y1 Motor steps:	14820
+Xcenter motor steps:	6321
+Ycenter motor steps:	9399
+
+#Motor steps per cm (X,Y) :   1629.49  1635.98
+#this is not a calibration, for comparison purpose only
+
+X grid center CCD pixel FOV C:	962
+Y grid center CCD pixel FOV C:	962
+X grid center CCD pixel FOV D:	953
+Y grid center CCD pixel FOV D:	959
+X grid center CCD pixel FOV B:	987
+Y grid center CCD pixel FOV B:	974
+X grid center CCD pixel FOV A:	1011
+Y grid center CCD pixel FOV A:	978
+
+#####################################################################
+# 	Bottom illumination setup grids
+# 	Format:
+#	    GridDef#: gridName, x-size, y-size, offset_mm, spacing_mm
+#####################################################################
+GridDef1:	15x23,15,23,0,5.0
+GridDef2:	11x21,11,21,0,5
+GridDef3:	5x10,5,10,0,10
+GridDef4:	8x12 wellplate,8,12,9.1,9.1
+GridDef5:	6x8x1cm grid,6,8,0,10
+
+
+#####################################################################
+#	Hardware Interface Configuration		 AH 6/26/2017
+#####################################################################
+EX Filter Motor Driver Number:	0		# ("A")	 XFO (excitation) filter motor
+Lens Motor Driver Number:	1		# ("B") lens carousel
+Filter Motor Driver Number:	2		# ("C")	upper filter wheel
+Filter2 Motor Driver Number:	3		# ("D")	lower filter wheel
+EM Filter Motor Driver Number:	2		# ("C")	upper filter wheel
+EM Filter2 Motor Driver Number:	3		# ("D")	lower filter wheel
+Lens fstop Motor Driver Number:	4	# ("E") was 3;  Iris Home = 52.2mm
+Shelf Motor Driver Number:	5		# ("F") was 2
+Fluorescence X Motor Driver Number:	6
+Fluorescence Y Motor Driver Number:	7
+
+Coldfinger Heater Resistor Monitor NI Channel:	0		#AH: AI 0	#pin 3
+Lights Voltage Monitor NI Channel:	5	#pin 13 not implemented as of 4/26/00
+Lights Outer On Control NI Channel:	7     		#AH: P0.7
+Lights Inner On Control NI Channel:	2			#AH: P0.2
+Lights Control Selector NI Channel:	3	#AH: was P0.3 >> unused	#pin 31
+
+Lights Control Polarity:	1		# 0 for older units, 1 for modern IVIS's
+Lights Control Channel:	1		#AH: AO 1
+#Lighthing Start Voltage:2.5		#AH: spelled wrong and not found when spelled correctly!
+
+Laser On Control NI Channel:	5   		#AH: port 3 (P2.5)
+Galvo On Control NI Channel:	2   		#AH: port 3 (P2.2)
+Command Out Control Port:	2      		#AH: Door Lock/Laser/Galvo Port
+Command In Control Port:	1       		#AH: Fluorescent source toggle/Door Status Control Port
+Additional Command Out Control Port:	0		#AH: Port remapping for PCIE-6321 board: Lighting control and system Init
+
+Darkbox Door Entry LED NI Channel:	5     #AH: moved from p0.1 to p0.5
+Darkbox Door Open Monitor NI Channel:	5  #AH: moved from p0.2 to p2.5
+Darkbox Door Mag Lock Channel:	3         #AH: change from P4.5 to P3.3
+
+Fiber Source Toggle NI Channel:	3		#AH: XFO line port 3 (P2) change from P3.5
+Fiber Source Intensity Control NI Channel:	0	#AH: AO 0
+Motor Board Hardware Reset NI Channel:	1		#AH: moved from p0.1 to p2.1??	#pin 27
+
+Bottom Fiber Toggle Channel:	0
+
+Init NI Channel:	0			#AH: P0.0
+
+Lights Voltage Monitor NI Channel:	5	#pin 13 not implemented as of 4/26/00
+Lights Control Selector NI Channel:	3	#AH: was P0.3 >> unused	#pin 31
+
+
+#####################################################################
+#	Photo - Lightlevels			         EJ  11/6/2020
+#####################################################################
+Photo Bias Level:	345
+Minimum Photo Level:	750
+Lighting Test Max Steps:	2
+Lighting Saturation Counts:	70000
+
+LED Calibration Levels:	0.8,0.9,1.0,1.1,1.2,1.3,1.5,1.8,2.0,2.5,3.0,3.5,4.0,4.5,4.9
+LED Calibration Intensities:	1.279e-06,2.797e-05,0.000644,0.004702,0.0138,0.02827,0.06899,0.1339,0.2557,0.4446,0.6313,0.7817,0.8859,0.9639,1
+
+Inner LED Calibration Levels:	0.8,0.9,1.0,1.1,1.2,1.3,1.5,1.8,2.0,2.5,3.0,3.5,4.0,4.5,4.9
+Inner LED Calibration Intensities:	3.363e-06,9.961e-06,0.000182,0.001474,0.00554,0.01336,0.04007,0.09138,0.1583,0.3245,0.5202,0.7211,0.8619,0.9481,1
+
+# Reference measurement conditions:FOV/ExposTime/Bin/Fstop/LightLevel
+LED Photo Reference Measurement:	C,0.2,4,8,1.31
+Inner LED Photo Reference Measurement:	A,0.2,4,8,1.38
+
+
+#####################################################################
+# 	Absolute Light Intensity Calibration	     Will 2021-06-14
+#	Calibration units:p/sec/cm2/sr
+#	XLS-79 (1.327e8)
+#####################################################################
+Coef C-ccd at FOV 22.4, f1:	7.223E+05
+Coef C-ccd at FOV 13.2, f1:	7.234E+05
+Coef C-ccd at FOV 6.6, f1:	7.452E+05
+Coef C-ccd at FOV 4, f1:	7.249E+05
+Coef C-ccd at FOV 22.4, f2:	2.891E+06
+Coef C-ccd at FOV 13.2, f2:	2.907E+06
+Coef C-ccd at FOV 6.6, f2:	3.015E+06
+Coef C-ccd at FOV 4, f2:	3.008E+06
+Coef C-ccd at FOV 22.4, f4:	1.170E+07
+Coef C-ccd at FOV 13.2, f4:	1.172E+07
+Coef C-ccd at FOV 6.6, f4:	1.193E+07
+Coef C-ccd at FOV 4, f4:	1.218E+07
+Coef C-ccd at FOV 22.4, f8:	4.591E+07
+Coef C-ccd at FOV 13.2, f8:	4.549E+07
+Coef C-ccd at FOV 6.6, f8:	4.647E+07
+Coef C-ccd at FOV 4, f8:	4.633E+07
+
+C-ccd Calibration units:	p/sec/cm2/sr
+
+
+#################################################################
+#	Fluorescence				     EJ  11/6/2020
+#################################################################
+Fluorescence kit installed:	yes
+
+Fluorescent lamp high voltage:	4.7
+Fluorescent lamp low voltage:	2.11
+
+ND factor for 430:	0.000662
+ND factor for 465:	0.001087
+ND factor for 500:	0.000918
+ND factor for 535:	0.001058
+ND factor for 570:	0.000983
+ND factor for 605:	0.001084
+ND factor for 640:	0.001444
+ND factor for 675:	0.002814
+ND factor for 710:	0.006809
+ND factor for 745:	0.00968
+
+#Allow fluorescence at FOV A:yes
+
+
+#####################################################################
+#	Flat-field Correction 				EJ  11/6/2020
+# 	Coefficients:k0,k1,k2,k3,k4 in
+#		ff(r) = k0 + k1*r + k2*r^2 + k3*r^3 + k4*r^4
+# 	Coordinates for CCD chip offset: x0,y0
+# 	Format is:k0,k1,k2,k3,k4,x0,y0
+#####################################################################
+Shelf Position A FF5 f/1 Coefs:	1.020414,-0.189043,0.298781,-0.180408,0.028754,-0.046228,0.133962
+Shelf Position A FF5 f/2 Coefs:	0.988646,0.013599,-0.014326,-0.010831,0.003231,-0.237206,0.357950
+Shelf Position A FF5 f/4 Coefs:	0.987419,0.027501,-0.037688,0.001175,0.001628,-0.216285,0.446918
+Shelf Position A FF5 f/8 Coefs:	0.995186,-0.004145,0.006232,-0.020465,0.005027,-0.189747,0.406110
+
+Shelf Position B FF5 f/1 Coefs:	1.005193,-0.054607,0.042421,-0.017875,0.001354,-0.016936,0.138759
+Shelf Position B FF5 f/2 Coefs:	0.994144,-0.000259,-0.009644,-0.001489,0.000234,-0.133653,0.168002
+Shelf Position B FF5 f/4 Coefs:	1.016104,-0.073931,0.062473,-0.028108,0.003511,-0.074543,0.301584
+Shelf Position B FF5 f/8 Coefs:	1.014198,-0.069306,0.055604,-0.025538,0.003214,-0.111416,0.294619
+
+Shelf Position C FF5 f/1 Coefs:	0.994562,0.015848,-0.015490,0.002067,-0.000151,0.010908,0.361828
+Shelf Position C FF5 f/2 Coefs:	0.995898,0.015112,-0.014923,0.001805,-0.000096,-0.117664,0.377086
+Shelf Position C FF5 f/4 Coefs:	0.995819,0.013618,-0.014441,0.001736,-0.000093,-0.118310,0.383738
+Shelf Position C FF5 f/8 Coefs:	0.999426,0.003426,-0.008234,0.000522,-0.000019,-0.116572,0.414798
+
+Shelf Position D FF5 f/1 Coefs:	0.993171,0.001630,-0.005467,0.000520,-0.000023,-0.013469,0.602904
+Shelf Position D FF5 f/2 Coefs:	1.000928,-0.005985,-0.003693,0.000345,-0.000014,-0.265713,0.571583
+Shelf Position D FF5 f/4 Coefs:	0.998724,-0.008314,-0.002300,0.000145,-0.000006,-0.214628,0.681573
+Shelf Position D FF5 f/8 Coefs:	0.992515,0.000424,-0.004886,0.000408,-0.000015,-0.248900,0.641495
+
+
+#################################################################
+#	Galvo - Structured Light
+#################################################################
+# tell the structured light and alignment light where to find their files
+Java Library Path:	C:\Program Files\WaveMetrics\Igor Pro Folder\Living Image Files\JavaFiles
+
+#Structured Light correction if some of the SL lines are missing
+#Defaults to 0 if line below is not activated
+Structured Light Delay Cycles:	17
+
+# Parameter d:the distance from the galvo projector to the optical axis(mm)
+Galvo-CCD Separation:	107
+
+# Parameter l:distance from the galvanometer to the stage at zero height, in millimeters
+Shelf Position B Galvo Distance:	155.46
+Shelf Position C Galvo Distance:	259.73
+Shelf Position D Galvo Distance:	474.39
+Shelf Position Load Galvo Distance:	378.91
+
+Structured Light Big L B:	-583.57
+Structured Light Big L C:	661.27
+Structured Light Big L D:	772.15
+
+
+#####################################################################
+#	Line frequency of the structured light lines, for each FOV
+#####################################################################
+Structured Light Frequency B Fine:	1.0
+Structured Light Frequency B Medium:	0.75
+Structured Light Frequency B Coarse:	0.5
+Structured Light Frequency C Fine:	1.0
+Structured Light Frequency C Medium:	0.75
+Structured Light Frequency C Coarse:	0.5
+Structured Light Frequency D Medium:	0.75
+Structured Light Frequency D Coarse:	0.5
+
+
+#####################################################################
+#	Galvanometer correction coefficients	         VN 7/23/2005
+# 	Keep coefficients in this order
+#####################################################################
+Galvanometer X Distortion:	0.35
+Galvanometer Y Distortion:	1.0
+Galvanometer X Perspective:	0.005
+Galvanometer Y Perspective:	0.0
+Galvanometer X Transform:	0.05
+Galvanometer Y Transform:	1
+Galvanometer Degrees Per Step:	9.16e-4
+
+
+#####################################################################
+#	Galvanometer Alignment Parameters	         EJ  11/6/2020
+#####################################################################
+Alignment A Top coordinate:	37028
+Alignment A Bottom coordinate:	30902
+Alignment A Left coordinate:	29361
+Alignment A Right coordinate:	35245
+Alignment A Horizontal Center Coordinate:	32342
+Alignment A Vertical Center Coordinate:	33924
+Alignment A Step Distance:	180
+
+Alignment B Top coordinate:	39043
+Alignment B Bottom coordinate:	29045
+Alignment B Left coordinate:	27528
+Alignment B Right coordinate:	37112
+Alignment B Horizontal Center Coordinate:	32332
+Alignment B Vertical Center Coordinate:	33940
+Alignment B Step Distance:	210
+
+Alignment C Top coordinate:	44315
+Alignment C Bottom coordinate:	24485
+Alignment C Left coordinate:	22630
+Alignment C Right coordinate:	41890
+Alignment C Horizontal Center Coordinate:	32298
+Alignment C Vertical Center Coordinate:	33965
+Alignment C Step Distance:	270
+
+Alignment D Top coordinate:	52155
+Alignment D Bottom coordinate:	18235
+Alignment D Left coordinate:	15474
+Alignment D Right coordinate:	49054
+Alignment D Horizontal Center Coordinate:	32318
+Alignment D Vertical Center Coordinate:	33935
+Alignment D Step Distance:	310
+
+
+#####################################################################
+#	Galvanometer SL Parameters	        	 EJ  11/6/2020
+#####################################################################
+Structure B Left Coordinate:	17160
+Structure B Horizontal Center Coordinate:	32158
+Structure B Right Coordinate:	47178
+Structure B Bottom Coordinate:	5519
+Structure B Vertical Center Coordinate:	13599
+Structure B Top Coordinate:	23573
+Structure B Step Distance:	270
+Structure B Line Frequency:	1.0
+
+Structure C Left Coordinate:	15956
+Structure C Horizontal Center Coordinate:	32238
+Structure C Right Coordinate:	48382
+Structure C Bottom Coordinate:	14559
+Structure C Vertical Center Coordinate:	26837
+Structure C Top Coordinate:	41347
+Structure C Step Distance:	270
+Structure C Line Frequency:	1.0
+
+Structure D Left Coordinate:	17264
+Structure D Horizontal Center Coordinate:	32348
+Structure D Right Coordinate:	47272
+Structure D Bottom Coordinate:	23917
+Structure D Vertical Center Coordinate:	37223
+Structure D Top Coordinate:	51887
+Structure D Step Distance:	260
+Structure D Line Frequency:	1.0
+
+#
+#	End of CameraInfo.txt
+#
+
+*** Graph Controls:	
+Overlay:	Overlay
+Reversed:	1
+Color Table:	Rainbow
+ColorTableIsLog:	0
+Intensity Calibration:	photons
+Calibration Value Per Count:	1
+Brightness:	100
+Gamma:	1.500000
+Alpha Blend:	100
+Rotation:	0
+Background:	1
+Cosmic:	1
+Flat Field:	1
+Color Table Min:	109246.787500
+Color Table Max:	2037507.500000
+Raw Color Table Min:	-3614.907715
+Raw Color Table Max:	2184935.750000
+
+
+

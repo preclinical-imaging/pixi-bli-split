@@ -1,0 +1,166 @@
+*** ClickNumber:	DG20220105114235
+ClickInfoType:	SingleClickAnalysis
+
+*** photographic image:	photograph.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:42:42
+Acquisition Seconds:	3724249362
+Pixel Width:	1
+Pixel Height:	1
+Binning Factor:	2
+Image Units:	counts
+f Number:	8
+Field of View:	22.4
+Filter Position:	1
+Emission filter:	Open
+Exposure Time Sec:	0.2
+Object radius:	0.75
+Subject size:	1.5
+Error Wave:	No Error
+
+*** luminescent image:	luminescent.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:42:59
+Acquisition Seconds:	3724249379
+Pixel Width:	1
+Pixel Height:	1
+Image Units:	counts
+Binning Factor:	8
+Luminescent Exposure (Seconds):	40
+Luminescent Exposure Units:	sec
+f Number:	1
+Field of View:	22.4
+Read Bias Level:	496.628
+Emission filter:	Open
+Filter Position:	1
+Excitation filter:	Block
+Subject size:	1.5
+Demand Temperature:	-90
+Measured Temperature:	-89
+Error Wave:	No Error
+Cosmic:	0
+Background Corrected:	0
+Flat Field Corrected:	0
+
+*** readbias image:	readbias.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:42:59
+Acquisition Seconds:	3724249379
+Pixel Width:	1
+Pixel Height:	1
+Data Multiplier:	10
+Binning Factor:	8
+Demand Temperature:	-90
+Measured Temperature:	-89
+Temperature Lock Status:	Locked
+Background Exposure (Seconds):	0.0
+Background Click:	BKG20220105025931
+
+*** darkcharge image:	background.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:42:59
+Acquisition Seconds:	3724249379
+Pixel Width:	1
+Pixel Height:	1
+Data Multiplier:	10
+Read Bias Level:	496.203
+Binning Factor:	8
+Demand Temperature:	-90
+Measured Temperature:	-89
+Temperature Lock Status:	Locked
+Background Exposure (Seconds):	40
+Background Click:	BKG20220105025931
+
+*** readbiasonly image:	readbiasonly.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:43:42
+Acquisition Seconds:	3724249422
+Pixel Width:	1
+Pixel Height:	1
+Binning Factor:	8
+Read Bias Level:	496.628
+Demand Temperature:	-90
+Measured Temperature:	-89
+Data Multiplier:	1
+Background Exposure (Seconds):	0.0
+
+*** User Label Name Set:	Living Image Universal
+User:	zakharenko/GORDON
+Group:	DG001   1/4/22
+Experiment:	Brain Tumor
+Comment1:	Auto exp., small binning, F/Stop 1, 10 min
+Comment2:	DORSAL-  3466, 3467, 3468, 3469, 3470
+Time Point:	
+Animal Number:	3466, 3467, 3468, 3469, 3470
+Animal Strain:	
+Animal Model:	
+Sex:	
+View:	Dorsal
+Cell Line:	
+Reporter:	
+Treatment:	
+Luc Injection Time:	
+IACUC Number:	
+
+*** User Input:	
+User ID:	DG
+Display Type:	Overlay
+User:	
+Group:	
+Experiment:	
+Comment1:	
+Comment2:	
+Time Point:	
+Animal Number:	
+Animal Strain:	
+Animal Model:	
+Sex:	
+View:	
+Cell Line:	
+Reporter:	
+Treatment:	
+Luc Injection Time:	
+IACUC Number:	
+Displayed Key Choices:	User;Group;Experiment;Comment1;Comment2;
+
+*** ROIs:	
+ROI 1:	zColorIndex=1;ROI Type=Measurement;ColorTable=BlueRedGreen;Subject ROI=_none_;Subject ID=;Subject Label=;Bkg ROI=_none_;LineSize=2.000000;Locked=0;PositionLocked=0;Shape=Circle;Xc=225.944522555256;Yc=424.267885382117;Width=225.882348100249;Height=225.882348100249;Angle=0.0000;Label=ROI 1;cm per pixel=0.011666666667;ROIColor=16711680;
+ROI 2:	zColorIndex=1;ROI Type=Measurement;ColorTable=BlueRedGreen;Subject ROI=_none_;Subject ID=;Subject Label=;Bkg ROI=_none_;LineSize=2.000000;Locked=0;PositionLocked=0;Shape=Circle;Xc=595.550387419150;Yc=420.840252935703;Width=225.882348100249;Height=225.882348100249;Angle=0.0000;Label=ROI 2;cm per pixel=0.011666666667;ROIColor=16711680;
+ROI 3:	zColorIndex=1;ROI Type=Measurement;ColorTable=BlueRedGreen;Subject ROI=_none_;Subject ID=;Subject Label=;Bkg ROI=_none_;LineSize=2.000000;Locked=0;PositionLocked=0;Shape=Circle;Xc=950.085990602056;Yc=420.531599109264;Width=225.882348100249;Height=225.882348100249;Angle=0.0000;Label=ROI 3;cm per pixel=0.011666666667;ROIColor=16711680;
+ROI 4:	zColorIndex=1;ROI Type=Measurement;ColorTable=BlueRedGreen;Subject ROI=_none_;Subject ID=;Subject Label=;Bkg ROI=_none_;LineSize=2.000000;Locked=0;PositionLocked=0;Shape=Circle;Xc=1259.151624171693;Yc=427.710731506323;Width=225.882348100249;Height=225.882348100249;Angle=0.0000;Label=ROI 4;cm per pixel=0.011666666667;ROIColor=16711680;
+ROI 5:	zColorIndex=1;ROI Type=Measurement;ColorTable=BlueRedGreen;Subject ROI=_none_;Subject ID=;Subject Label=;Bkg ROI=_none_;LineSize=2.000000;Locked=0;PositionLocked=0;Shape=Circle;Xc=1607.525313691455;Yc=426.703207041471;Width=225.882348100249;Height=225.882348100249;Angle=0.0000;Label=ROI 5;cm per pixel=0.011666666667;ROIColor=16711680;
+
+*** Tags:	
+
+*** Comments:	
+
+*** saved luminescent corrected image:	luminescentFloatCorrected.TIF
+Acquisition Date:	Wednesday, January 5, 2022
+Acquisition Time:	11:42:59
+Acquisition Seconds:	3724249379
+Pixel Width:	1
+Pixel Height:	1
+Image Units:	counts
+Binning Factor:	8
+Luminescent Exposure (Seconds):	40
+Luminescent Exposure Units:	sec
+f Number:	1
+Field of View:	22.4
+Read Bias Level:	496.628
+Emission filter:	Open
+Filter Position:	1
+Excitation filter:	Block
+Subject size:	1.5
+Demand Temperature:	-90
+Measured Temperature:	-89
+Error Wave:	No Error
+Cosmic:	0
+Background Corrected:	1
+Flat Field Corrected:	1
+Cosmic Corrected:	1
+Adapative FL corrected:	0
+FL Background Corrected:	0
+Intensity Calibration:	Radiance (Photons)
+
+
+
