@@ -5,10 +5,8 @@ This project includes a python library for splitting multi-subject bioluminescen
 
 The PIXI plugin is required for running this within XNAT.
 
-1. Build the image
-
-    `docker build -t xnat/bli-split:1.0 .`
-2. Add `xnat/command.json` to XNAT
-3. Enable the command at the site and project level
-4. Run the container 
-
+1. Build the image: `docker build -t xnat/bli-split:1.0 .`
+2. Add `xnat/command_auto.json` to XNAT
+3. Add `xnat/command_manual.json` to XNAT
+4. Enable the command at the site and project level
+5. Run the container in XNAT from a pixi:bliSessionData instance.

@@ -1,10 +1,10 @@
 {
-  "name": "bli-split",
-  "label": "bli-split",
-  "description": "Split multi-subject BLI image sessions into single subject image sessions",
+  "name": "bli-split-auto",
+  "label": "bli-split-auto",
+  "description": "Automatically split multi-subject BLI image sessions into single subject image sessions using Li thresholding.",
   "version": "1.0",
   "schema-version": "1.0",
-  "info-url": "",
+  "info-url": "https://bitbucket.org/xnat-containers/pixi-bli-split/src/main/",
   "image": "xnat/bli-split:1.0",
   "type": "docker",
   "working-directory": "/usr/src/app",
@@ -51,9 +51,9 @@
   ],
   "xnat": [
     {
-      "name": "bli-split",
-      "label": "BLI Splitter",
-      "description": "Split multi-subject BLI image sessions into single subject image sessions",
+      "name": "bli-split-auto",
+      "label": "BLI Splitter -- Automatic",
+      "description": "Automatically split multi-subject BLI image sessions into single subject image sessions using Li thresholding.",
       "contexts": ["pixi:bliSessionData"],
       "external-inputs": [
         {

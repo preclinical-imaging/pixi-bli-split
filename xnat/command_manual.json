@@ -1,0 +1,192 @@
+{
+  "name": "bli-split-manual",
+  "label": "bli-split-manual",
+  "description": "Manually split multi-subject BLI image sessions into single subject image sessions.",
+  "version": "1.0",
+  "schema-version": "1.0",
+  "info-url": "https://bitbucket.org/xnat-containers/pixi-bli-split/src/main/",
+  "image": "xnat/bli-split:1.0",
+  "type": "docker",
+  "working-directory": "/usr/src/app",
+  "command-line": "python run.py /input/SCANS -u $XNAT_USER -p $XNAT_PASS -x $XNAT_HOST #PROJECT# #EXPERIMENT# --output_directory /output #ANIMAL_NUMBERS# #BBOX1# #BBOX2# #BBOX3# #BBOX4# #BBOX5# ",
+  "override-entrypoint": true,
+  "mounts": [
+    {
+      "name": "input-mount",
+      "writable": false,
+      "path": "/input"
+    },
+    {
+      "name": "output-mount",
+      "writable": true,
+      "path": "/output"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "project",
+      "description": "XNAT Project ID",
+      "type": "string",
+      "required": true,
+      "replacement-key": "#PROJECT#",
+      "command-line-flag": "--project"
+    },
+    {
+      "name": "experiment",
+      "description": "XNAT Experiment Label",
+      "type": "string",
+      "required": true,
+      "replacement-key": "#EXPERIMENT#",
+      "command-line-flag": "--experiment"
+    },
+    {
+      "name": "animal_numbers",
+      "description": "Provide the animal number / subject id of each animal in the image from left to right. There should be 5 space separated values. Empty positions can be labeled as Empty or X. Example: 3466 3467 3468 Empty 3470",
+      "type": "string",
+      "required": false,
+      "replacement-key": "#ANIMAL_NUMBERS#",
+      "command-line-flag": "-a"
+    },
+    {
+      "name": "boundary_box_1",
+      "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the first animal. Example: 30 90 210 630",
+      "type": "string",
+      "required": true,
+      "replacement-key": "#BBOX1#",
+      "command-line-flag": "-b"
+    },
+    {
+      "name": "boundary_box_2",
+      "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the second animal. Example: 210 90 380 630",
+      "type": "string",
+      "required": true,
+      "replacement-key": "#BBOX2#",
+      "command-line-flag": "-b"
+    },
+    {
+      "name": "boundary_box_3",
+      "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the third animal. Example: 380 90 550 630",
+      "type": "string",
+      "required": true,
+      "replacement-key": "#BBOX3#",
+      "command-line-flag": "-b"
+    },
+        {
+      "name": "boundary_box_4",
+      "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the fourth animal. Example: 550 90 715 630",
+      "type": "string",
+      "required": true,
+      "replacement-key": "#BBOX4#",
+      "command-line-flag": "-b"
+    },
+        {
+      "name": "boundary_box_5",
+      "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the fifth animal. Example: 715 90 900 630",
+      "type": "string",
+      "required": true,
+      "replacement-key": "#BBOX5#",
+      "command-line-flag": "-b"
+    }
+  ],
+  "outputs": [],
+  "xnat": [
+    {
+      "name": "bli-split-manual",
+      "label": "BLI Splitter -- Manual",
+      "description": "Manually split multi-subject BLI image sessions into single subject image sessions.",
+      "contexts": ["pixi:bliSessionData"],
+      "external-inputs": [
+        {
+          "name": "image-session",
+          "description": "BLI session input",
+          "type": "Session",
+          "required": true,
+          "provides-files-for-command-mount": "input-mount",
+          "user-settable": false,
+          "load-children": true
+        },
+        {
+          "name": "animal-numbers",
+          "description": "Provide the animal number / subject id of each animal in the image from left to right. There should be 5 space separated values. Empty positions can be labeled as Empty or X. Example: 3466 3467 3468 Empty 3470",
+          "type": "string",
+          "required": false,
+          "user-settable": true,
+          "default-value": "",
+          "provides-value-for-command-input": "animal_numbers"
+        },
+        {
+          "name": "boundary-box-1",
+          "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the first animal. Example: 30 90 210 630",
+          "type": "string",
+          "required": true,
+          "user-settable": true,
+          "default-value": "30 90 210 630",
+          "provides-value-for-command-input": "boundary_box_1"
+        },
+        {
+          "name": "boundary-box-2",
+          "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the second animal. Example: 210 90 380 630",
+          "type": "string",
+          "required": true,
+          "user-settable": true,
+          "default-value": "210 90 380 630",
+          "provides-value-for-command-input": "boundary_box_2"
+        },
+        {
+          "name": "boundary-box-3",
+          "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the third animal. Example: 380 90 550 630",
+          "type": "string",
+          "required": true,
+          "user-settable": true,
+          "default-value": "380 90 550 630",
+          "provides-value-for-command-input": "boundary_box_3"
+        },
+        {
+          "name": "boundary-box-4",
+          "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the fourth animal. Example: 550 90 715 630",
+          "type": "string",
+          "required": true,
+          "user-settable": true,
+          "default-value": "550 90 715 630",
+          "provides-value-for-command-input": "boundary_box_4"
+        },
+        {
+          "name": "boundary-box-5",
+          "description": "A 4-tuple defining the left, upper, right, and lower pixel coordinates of the fifth animal. Example: 715 90 900 630",
+          "type": "string",
+          "required": true,
+          "user-settable": true,
+          "default-value": "715 90 900 630",
+          "provides-value-for-command-input": "boundary_box_5"
+        }
+      ],
+      "derived-inputs": [
+        {
+          "name": "project-id",
+          "description": "XNAT Project ID",
+          "type": "string",
+          "required": true,
+          "provides-value-for-command-input": "project",
+          "user-settable": true,
+          "load-children": false,
+          "derived-from-wrapper-input": "image-session",
+          "derived-from-xnat-object-property": "project-id",
+          "multiple": false
+        },
+        {
+          "name": "session-label",
+          "description": "XNAT Image Session Label",
+          "type": "string",
+          "required": true,
+          "provides-value-for-command-input": "experiment",
+          "user-settable": true,
+          "load-children": false,
+          "derived-from-wrapper-input": "image-session",
+          "derived-from-xnat-object-property": "label",
+          "multiple": false
+        }
+      ],
+      "output-handlers": []
+    }
+  ]
+}

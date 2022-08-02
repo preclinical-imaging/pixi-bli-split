@@ -27,18 +27,43 @@ def round_to_multiple(number, multiple, direction='nearest'):
 
 
 class Bli:
+    """
+    Class to represent a Bioluminescence Imaging scan obtained from a PerkinElmer IVIS System
+
+    Each BLI scan directory is expected to contain the following:
+        AnalyzedClickInfo.json
+        background.tif
+        luminescent.tif
+        photograph.tif
+        readbias.tif
+
+    AnalyzedClickInfo.txt file is converted to AnalyzedClickInfo.json during PIXI's import process.
+
+    photograph.tif is four times larger than the other images. The crop applied to photograph.tif is scaled down by a
+    factor of four.
+    """
+
     def __init__(self, path: Union[Path, str] = None,
                  photograph_tif: Image = None,
                  luminescent_tif: Image = None,
                  background_tif: Image = None,
                  readbias_tif: Image = None,
                  analyzedclickinfo: dict = None):
+        """
+        Main method for constructing BLI object.
+
+        Option 1 - construct from path.
+        Option 2 - construct from PIL Images and analyzedclickinfo dictionary
+
+        See factory methods below.
+        """
 
         if path:
             self.path = Path(path)
             self.photograph_tif, self.luminescent_tif, self.background_tif, self.readbias_tif = self.load_images(self.path)
             self.analyzedclickinfo = self.load_analyzed_click_info(self.path)
         elif photograph_tif and luminescent_tif and background_tif and readbias_tif:
+            self.path = None
             self.photograph_tif = photograph_tif
             self.luminescent_tif = luminescent_tif
             self.background_tif = background_tif
@@ -49,10 +74,45 @@ class Bli:
 
     @classmethod
     def from_path(cls, path: Union[Path, str]):
+        """
+        Construct Bli scan from the supplied path.
+
+        Parameters
+        ----------
+        path : Union[Path, str]
+            Path to a Bli scan
+
+        Returns
+        -------
+        Bli
+            A Bli scan from the provided path.
+        """
         return cls(path=path)
 
     @classmethod
-    def from_images(cls, photograph_tif, luminescent_tif, background_tif, readbias_tif, analyzedclickinfo):
+    def from_images(cls, photograph_tif: Image, luminescent_tif: Image, background_tif: Image, readbias_tif: Image,
+                    analyzedclickinfo: dict):
+        """
+        Construct Bli scan from the supplied PIL Images and analyzedclickinfo dictionary.
+
+        Parameters
+        ----------
+        photograph_tif : Image
+            PIL Image for photograph.tif
+        luminescent_tif : Image
+            PIL Image for luminescent.tif
+        background_tif : Image
+            PIL Image for background.tif
+        readbias_tif : Image
+            PIL Image for readbias.tif
+        analyzedclickinfo : dict
+            AnalyzedClickInfo.txt converted to dictionary format.
+
+        Returns
+        -------
+        Bli
+            A Bli scan from the provided images and analyzedclickinfo.
+        """
         return cls(photograph_tif=photograph_tif,
                    luminescent_tif=luminescent_tif,
                    background_tif=background_tif,
@@ -61,6 +121,20 @@ class Bli:
 
     @staticmethod
     def load_images(path: Union[Path, str]):
+        """
+        Load photograph.tif, luminescent.tif, background.tif, and readbias.tif from the provided directory.
+
+        Parameters
+        ----------
+        path : Union[Path, str]
+            Path to a directory containing photograph.tif, luminescent.tif, background.tif, and readbias.tif
+
+        Returns
+        -------
+        tuple[Image, Image, Image, Image]
+            4-tuple of photograph_tif, luminescent_tif, background_tif, readbias_tif opened as a PIL Image
+
+        """
         path = Path(path)
 
         photograph_tif = None
@@ -70,7 +144,6 @@ class Bli:
 
         for subpath in path.rglob('*'):
             if subpath.is_file():
-                extension = subpath.suffix.lower()
                 filename = subpath.name.lower()
 
                 match filename:
@@ -86,17 +159,26 @@ class Bli:
                     case 'readbias.tif':
                         readbias_tif = Image.open(subpath)
                         logger.debug(f'readbias.tif read: {subpath}')
-                    case 'analyzedclickinfo.txt':
-                        logger.debug(f'TODO analyzedclickinfo.txt found: {subpath}')  # TODO
-                    case 'analyzedclickinfo.json':
-                        with open(subpath) as f:
-                            analyzedclickinfo_json = json.load(f)
-                        logger.debug(f'analyzedclickinfo.json read: {subpath}')
 
         return photograph_tif, luminescent_tif, background_tif, readbias_tif
 
     @staticmethod
     def load_analyzed_click_info(path: Union[Path, str]):
+        """
+        Load analyzedclickinfo.json into a dictionary.
+
+        TODO Parse analyzedclickinfo.txt.
+
+        Parameters
+        ----------
+        path : Union[Path, str]
+            Path to a directory containing analyzedclickinfo.json
+
+        Returns
+        -------
+        dict
+            path/analyzedclickinfo.json loaded into a dictionary
+        """
         path = Path(path)
 
         analyzedclickinfo_json = None
@@ -104,7 +186,6 @@ class Bli:
 
         for subpath in path.rglob('*'):
             if subpath.is_file():
-                extension = subpath.suffix.lower()
                 filename = subpath.name.lower()
 
                 match filename:
@@ -113,11 +194,28 @@ class Bli:
                     case 'analyzedclickinfo.json':
                         with open(subpath, "r") as file:
                             analyzedclickinfo_json = json.load(file)
-                logger.debug(f'analyzedclickinfo.json read: {subpath}')
+                            logger.debug(f'analyzedclickinfo.json read: {subpath}')
 
         return analyzedclickinfo_json
 
     def crop(self, animal_number: str, bounding_box: tuple[int, int, int, int]):
+        """
+        Crops each image in the BLI scan and returns a new BLI scan.
+
+        Parameters
+        ----------
+        animal_number : str
+            The animal number associated with the area being cropped. The new BLI scan will use this animal number in
+            place of the animal number from the original BLI scan.
+        bounding_box : tuple[int, int, int, int]
+            A 4-tuple defining the left, upper, right, and lower pixel coordinate.
+
+        Returns
+        -------
+        Bli
+           Returns a BLI scan with each image cropped to the provided area.
+        """
+
         # a 4-tuple defining the left, upper, right, and lower pixel coordinate.
         logging.debug(f'Splitting photograph.tif with bounding box: {bounding_box}')
         split_photograph_tif = self.photograph_tif.crop(bounding_box)
@@ -143,6 +241,19 @@ class Bli:
                                analyzedclickinfo=split_analyzedclickinfo)
 
     def threshold_split(self, return_qc_image=True):
+        """
+        Use Li thresholding to segment the animals from the Bli scan.
+
+        Parameters
+        ----------
+        return_qc_image : bool
+            Generate and return a quality control snapshot showing how the animals were segmented.
+
+        Returns
+        -------
+        list[Bli]
+            A list containing a Bli scan for each animal segmented from the original Bli scan.
+        """
         num_animals = len(self.animal_numbers)
 
         # Threshold the photograph image
@@ -189,12 +300,24 @@ class Bli:
             return split_blis
 
     def __get_animal_numbers(self):
+        """Parse the animal number string from analyzedclickinfo['userLabelNameSet']['animalNumber']"""
         if self.analyzedclickinfo:
             return list(map(lambda x: x.strip(), self.analyzedclickinfo['userLabelNameSet']['animalNumber'].split(',')))
         else:
             return None
 
-    def save(self, path: Path):
+    def save(self, path: Union[Path, str]):
+        """
+        Save the Bli scan to the provided path
+
+        Parameters
+        ----------
+        path : Union[Path, str]
+            Path to save photograph.tif, luminescent.tif, background.tif, and readbias.tif and analyzedclickinfo.json
+            to.
+        """
+        path = Path(path)
+
         if not os.path.exists(path):
             os.makedirs(path)
 
@@ -208,6 +331,7 @@ class Bli:
                 json.dump(self.analyzedclickinfo, file, indent=4)
 
     def __del__(self):
+        """Close photograph.tif, luminescent.tif, background.tif, and readbias.tif when an instance is deleted."""
         self.photograph_tif.close()
         self.luminescent_tif.close()
         self.background_tif.close()
